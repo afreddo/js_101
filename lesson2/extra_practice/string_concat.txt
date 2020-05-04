@@ -1,0 +1,22 @@
+// a function that takes an array of strings, and returns a string that is all 
+// those strings concatenated together.
+
+//Casual
+
+Given an array of strings
+
+Convert array into one string seperated by spaces
+
+Return the new string
+
+//Formal
+
+START
+
+#Given an array of strings
+
+SET newString = array converted into string seperated by spaces
+
+PRINT newString
+
+END

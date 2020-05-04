@@ -1,0 +1,22 @@
+//casual
+//A function that returns the sum of two numbers.
+
+Given two numbers
+
+create function that accepts two numbers as parameters
+- add the two numbers together
+
+return the sum of the two numbers
+
+//formal
+
+START
+
+#Given two numbers
+
+SET number1 = first number
+SET number2 = second number
+
+Print number1 + number2
+
+END
