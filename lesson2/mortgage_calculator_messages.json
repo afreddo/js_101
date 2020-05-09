@@ -1,0 +1,11 @@
+{
+  "apr": "Select the Annual Percentage Rate (APR) for the loan: (ex: for 10% select 10)",
+  "loanAmt": "Select the total loan amount: (ex: for $100 select 100)",
+  "loanDuration": "Select the duration for the loan (in months): ",
+  "initialize": "The Mortgage / Car Loan Calculator has been initialized...",
+  "oopsApr": "The number you selected is invalid. Please select a new APR: (ex: for 10% select 10)",
+  "oopsAmt": "The number you selected is invalid. Please select a new loan amount: (ex: for $100 select 100)",
+  "oopsDuration": "The number you selected is invalid. Please select a new duration for the loan (in months): ",
+  "again": "Would you like to calculate another payment? (1 for yes or 0 for no)",
+  "oopsAns": "That is an invalid answer. Please select 1 to calculate another payment of press 0 to escape"
+}
