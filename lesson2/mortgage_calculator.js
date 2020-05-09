@@ -7,8 +7,10 @@
 //    and n is loan duration in months
 //Experiments / Test Cases:
 //  mortgageCalculator(0, 0, 0); returns 0
+//  any non positive, non-number type should request a different value.
+//  a duration of 0 should be rejected
 //Data Structures:
-//  strings > numbers > strings
+//  strings > numbers > string
 //Algorithm:
 //  Get input from user for loan amount
 //  validate that user input is valid type
@@ -20,6 +22,10 @@
 //  convert MPR from % to decimal using: MPR/100
 //  convert MPR, loan amount, and loan duration into monthly payment
 //  return payment amount
+//  Ask user if they would like to repeat
+//  validate the answer was valid
+//  repeat code if user inputs yes
+
 let readline = require('readline-sync');
 let message = require('./mortgage_calculator_messages.json');
 console.clear();
