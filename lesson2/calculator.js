@@ -2,10 +2,7 @@ const readline = require('readline-sync');
 const messages = require('./calculator_messages.json');
 
 
-// These functions handle subproccess called during operations
-function prompt(message) {
-  console.log(`=> ${message}`);
-}
+// Funtions called during main calculator
 
 function invalidNumber(number) {
   return number.trimStart() === '' || Number.isNaN(Number(number));
@@ -15,7 +12,6 @@ function invalidResponse(ans) {
   return ans !== '0' && ans !== '1';
 }
 
-let langChoice;
 
 function languageSelector(lang) {
   if (lang === 'es' || lang === 'spanish') {
@@ -28,7 +24,7 @@ function languageSelector(lang) {
 // These prompts help select the users chosen language
 prompt(messages.language);
 let langChoiceInitial = readline.question();
-langChoice = languageSelector(langChoiceInitial);
+let langChoice = languageSelector(langChoiceInitial);
 
 prompt(messages[langChoice].selection);
 prompt(messages[langChoice].greeting);
