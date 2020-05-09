@@ -40,6 +40,13 @@ let validDuration = num => {
 
 let validAnswer = ans => (ans === '1' || ans === '0');
 
+let strToNum = str => {
+  if (/,/.test(str)) {
+    str = str.replace(/,/g, '');
+  }
+  return parseFloat(str);
+};
+
 let prompt = (key) => {
   console.log('=> ' + message[key]);
 };
@@ -60,27 +67,27 @@ do {
 
   //Get user input and validate
   prompt('apr');
-  let apr = parseFloat(readline.question());
+  let apr = strToNum(readline.question());
   while (!validNumber(apr)) {
     prompt('oopsApr');
-    apr = parseFloat(readline.question());
+    apr = strToNum(readline.question());
   }
   let mpr = apr / 12 / 100;
   console.clear();
 
   prompt('loanAmt');
-  let loanAmt = parseFloat(readline.question());
+  let loanAmt = strToNum(readline.question());
   while (!validNumber(loanAmt)) {
     prompt('oopsAmt');
-    loanAmt = parseFloat(readline.question());
+    loanAmt = strToNum(readline.question());
   }
   console.clear();
 
   prompt('loanDuration');
-  let duration = parseFloat(readline.question());
+  let duration = strToNum(readline.question());
   while (!validDuration(duration)) {
     prompt('oopsDuration');
-    duration = parseFloat(readline.question());
+    duration = strToNum(readline.question());
   }
   console.clear();
 
@@ -98,4 +105,4 @@ do {
     console.clear();
   }
 
-} while (parseInt(answer,10));
+} while (strToNum(answer));
