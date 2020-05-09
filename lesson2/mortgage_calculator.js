@@ -8,7 +8,6 @@
 //Experiments / Test Cases:
 //  mortgageCalculator(0, 0, 0); returns 0
 //  any non positive, non-number type should request a different value.
-//  a duration of 0 should be rejected
 //Data Structures:
 //  strings > numbers > string
 //Algorithm:
