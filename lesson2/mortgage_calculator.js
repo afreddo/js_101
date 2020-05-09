@@ -34,9 +34,6 @@ console.clear();
 let validNumber = num => {
   return (Math.sign(num) !== -1 && typeof num === 'number' && num >= 0);
 };
-let validDuration = num => {
-  return (Math.sign(num) === 1 && typeof num === 'number');
-};
 
 let validAnswer = ans => (ans === '1' || ans === '0');
 
@@ -52,10 +49,12 @@ let prompt = (key) => {
 };
 
 let payment = (mpr, amount, durationMonths) => {
-  if (mpr !== 0) {
+  if (mpr !== 0 && durationMonths !== 0) {
     return amount * (mpr / (1 - Math.pow((1 + mpr),(-durationMonths))));
-  } else {
+  } else if (mpr === 0 && durationMonths !== 0) {
     return amount / durationMonths;
+  } else {
+    return amount;
   }
 };
 
@@ -85,7 +84,7 @@ do {
 
   prompt('loanDuration');
   let duration = strToNum(readline.question());
-  while (!validDuration(duration)) {
+  while (!validNumber(duration)) {
     prompt('oopsDuration');
     duration = strToNum(readline.question());
   }
