@@ -57,6 +57,16 @@ let payment = (mpr, amount, durationMonths) => {
   }
 };
 
+let getInput = (inputType, inputErrorMessage) => {
+  prompt(inputType);
+  let num = strToNum(readline.question());
+  while (!validNumber(num)) {
+    prompt(inputErrorMessage);
+    num = strToNum(readline.question());
+  }
+  return num;
+};
+
 //Begin calculator
 prompt('initialize');
 
@@ -64,29 +74,14 @@ let answer;
 do {
 
   //Get user input and validate
-  prompt('apr');
-  let apr = strToNum(readline.question());
-  while (!validNumber(apr)) {
-    prompt('oopsApr');
-    apr = strToNum(readline.question());
-  }
+  let apr = getInput('apr', 'oopsApr');
   let mpr = apr / 12 / 100;
   console.clear();
 
-  prompt('loanAmt');
-  let loanAmt = strToNum(readline.question());
-  while (!validNumber(loanAmt)) {
-    prompt('oopsAmt');
-    loanAmt = strToNum(readline.question());
-  }
+  let loanAmt = getInput('loanAmt', 'oopsAmt');
   console.clear();
 
-  prompt('loanDuration');
-  let duration = strToNum(readline.question());
-  while (!validNumber(duration)) {
-    prompt('oopsDuration');
-    duration = strToNum(readline.question());
-  }
+  let duration = getInput('loanDuration', 'oopsDuration');
   console.clear();
 
   //Execution Code
