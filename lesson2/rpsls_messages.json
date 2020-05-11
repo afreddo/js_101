@@ -1,0 +1,37 @@
+{
+  "rock": {
+    "win": "scissors, lizard",
+    "lose": "paper, spock"
+  },
+  "paper": {
+    "win": "rock, spock",
+    "lose": "scissors, lizard"
+  },
+  "scissors": {
+    "win": "paper, lizard",
+    "lose": "rock, spock"
+  },
+  "lizard": {
+    "win": "paper, spock",
+    "lose": "rock, scissors"
+  },
+  "spock": {
+    "win": "rock, scissors",
+    "lose": "paper, lizard"
+  },
+  "oopsChoice": "Invalid selection please select one of the following:\nr for rock\np for paper\ns for scissors\nl for lizard\nsp for spock",
+  "selection": "Please select one of the following:\nr for rock\np for paper\ns for scissors\nl for lizzard\nsp for spock",
+  "greeting": "Welcome to Rock, Paper, Scissors, Lizard, Spock",
+  "1": "rock",
+  "2": "paper",
+  "3": "scissors",
+  "4": "lizard",
+  "5": "spock",
+  "winner": "Congratulations you are the winner!",
+  "loser": "You have lost to the computer.",
+  "oopsAnswer": "That is an invalid selection. Please select y for yes or n for no",
+  "again": "Would you like to play again? (y/n)",
+  "round win": "You've won this round",
+  "round loss": "You've lost this round",
+  "round tie": "You've tied this round"
+}
