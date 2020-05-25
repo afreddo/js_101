@@ -1,0 +1,7 @@
+input:  a string
+output: return array of all substrings of string that are palindromes (case sensitive)
+rules:  
+  Explicit-
+      case sensitive
+  Implicit-
+      empty string returns empty array 
