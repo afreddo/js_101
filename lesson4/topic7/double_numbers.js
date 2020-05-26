@@ -1,12 +1,10 @@
 function doubleNumbers(numbers) {
-  let counter = 0;
-
-  while (counter < numbers.length) {
+  let end = numbers.length-1;
+  for (let counter = 0; counter <= end; counter++) {
     let currentNum = numbers[counter];
     numbers.push(currentNum * 2);
-
-    counter += 1;
   }
+  numbers.splice(0,end);
 
   return numbers;
 }
